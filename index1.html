@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оцінка Робочого Простору</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <form id="form1" class="form-page">
+            <h2>Заповніть Ваші Вимоги</h2>
+            <p>Будь ласка, заповніть форму нижче, щоб отримати ціну для робочого простору.</p>
+            <div class="form-group">
+                <label for="name">Ім'я</label>
+                <input type="text" id="name" placeholder="Ваше Ім'я">
+            </div>
+            <div class="form-group">
+                <label for="phone">Номер телефону</label>
+                <input type="text" id="phone" placeholder="(+38)-066-66-66-666">
+            </div>
+            <div class="form-group">
+                <label for="email">Електронна пошта</label>
+                <input type="email" id="email" placeholder="Ваша електронна адреса">
+            </div>
+            <div class="form-group">
+                <label for="date">Дата</label>
+                <input type="text" id="date" placeholder="дд.мм.рррр">
+            </div>
+            <p id="error1" style="color: red; display: none;">Ви не заповнили всі поля</p>
+            <button type="button" class="btn" onclick="validateForm1()">Далі</button>
+        </form>
+
+        <form id="form2" class="form-page" style="display: none;">
+            <h2>Ваші Вимоги</h2>
+            <div class="form-group">
+                <label for="spaceType">Тип Простору</label>
+                <select id="spaceType">
+                    <option>Простір для Подій</option>
+                    <option>Простір для Роботи</option>
+                    <option>Простір для Свят</option>
+                    <option>Простір для Корпоративів</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="numPeople">Кількість Людей</label>
+                <input type="text" id="numPeople" placeholder="01">
+            </div>
+            <div class="form-group">
+                <label for="checkIn">Дата заїзду</label>
+                <input type="text" id="checkIn" placeholder="дд.мм.рррр">
+            </div>
+            <div class="form-group">
+                <label for="checkOut">Дата виїзду</label>
+                <input type="text" id="checkOut" placeholder="дд.мм.рррр">
+            </div>
+            <div class="form-group">
+                <label for="location">Місцезнаходження</label>
+                <input type="text" id="location" placeholder="Місто/Район">
+            </div>
+            <div class="form-group">
+                <label for="preferences">Чи є конкретні побажання?</label>
+                <select id="preferences">
+                    <option value="no">Ні</option>  
+                    <option value="yes">Так</option>
+                </select>
+                <input type="text" id="preferencesDetails" placeholder="Будь ласка, вкажіть тут" style="display: none;">
+            </div>
+            <p id="error2" style="color: red; display: none;">Ви не заповнили всі поля</p>
+            <button type="button" class="btn" onclick="showForm1()">Назад</button>
+            <button type="button" class="btn" onclick="validateForm2()">Відправити</button>
+        </form>
+
+        <div id="form3" class="form-page" style="display: none;">
+            <h2>Ваш запит прийнято</h2>
+            <p id="requestNumber"></p>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
