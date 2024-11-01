@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Map with Leaflet.js</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles4.css">
+</head>
+<body>
+  <h1>My Interactive Map</h1>
+  
+  <div class="map-container">
+    <div id="map"></div>
+  </div>
+
+  <div class="destination-input">
+    <label for="destination-lat">Latitude:</label>
+    <input type="number" id="destination-lat" placeholder="Enter latitude" step="0.000001">
+    
+    <label for="destination-lng">Longitude:</label>
+    <input type="number" id="destination-lng" placeholder="Enter longitude" step="0.000001">
+    
+    <button onclick="scrollToDestination()">Scroll to Destination</button>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="script4.js"></script>
+</body>
+</html>
